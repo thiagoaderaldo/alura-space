@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  alura-curso-react:
+    image: thiago.aderaldo/alura-space:1.0
+    container_name: alura-space
+    networks:
+      - compose-bridge
+    ports:
+      - 3000:3000
+    volumes:
+     - alura-space:/app
+
+volumes:
+  alura-space:
+networks:
+  compose-bridge:
+    driver: bridge
